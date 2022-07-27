@@ -65,7 +65,7 @@ const colors = [
   '#FDFD97',
   '#FEB144',
   '#FF6663',
-] // ['#583C87', '#4DA865', '#E45A84', '#6097C7', '#E4D33A']
+]
 
 function sampleBall(): BallProps {
   return {

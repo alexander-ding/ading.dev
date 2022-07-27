@@ -48,11 +48,16 @@ export function Navbar() {
             <span className='lt-sm:display-none'>Résumé </span>
             <i class='ri-article-line' />
           </a>
-          <a title='GitHub' href='https://github.com/alexander-ding'>
+          <a
+            title='GitHub'
+            target='_blank'
+            href='https://github.com/alexander-ding'
+          >
             <i className='ri-github-line' />
           </a>
           <a
             title='LinkedIn'
+            target='_blank'
             href='https://www.linkedin.com/in/alexander-j-ding/'
           >
             <i className='ri-linkedin-box-line' />
