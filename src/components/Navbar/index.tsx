@@ -1,44 +1,28 @@
-import { useCallback, useState } from 'preact/hooks'
+import { useCallback } from 'preact/hooks'
 import { Link, NavLink } from 'react-router-dom'
 import useColorScheme, { ColorScheme } from '../../hooks/useColorScheme'
-import Party from '../Party'
+import usePartyMode from '../../hooks/usePartyMode'
+import Background from '../Background'
 import './index.css'
 
 export function Navbar() {
-  const [shouldToggleBack, setShouldToggleBack] = useState(false)
   const [colorScheme, setColorScheme] = useColorScheme()
-  const [partyMode, setPartyMode] = useState(false)
+  const [partyMode] = usePartyMode()
 
   const toggleTheme = useCallback(() => {
+    if (partyMode) {
+      return
+    }
     if (colorScheme === ColorScheme.Dark) {
       setColorScheme(ColorScheme.Light)
     } else {
       setColorScheme(ColorScheme.Dark)
     }
-    setShouldToggleBack(false)
-  }, [colorScheme, setColorScheme])
-  const togglePartyMode = useCallback(() => {
-    if (!partyMode && colorScheme === ColorScheme.Light) {
-      setColorScheme(ColorScheme.Dark)
-      setShouldToggleBack(true)
-    }
-
-    if (partyMode && shouldToggleBack) {
-      setColorScheme(ColorScheme.Light)
-      setShouldToggleBack(false)
-    }
-    setPartyMode(!partyMode)
-  }, [
-    shouldToggleBack,
-    setShouldToggleBack,
-    setColorScheme,
-    partyMode,
-    setPartyMode,
-  ])
+  }, [partyMode, colorScheme, setColorScheme])
 
   return (
     <header className='text-gray-700 dark:text-gray-200'>
-      {partyMode ? <Party /> : null}
+      <Background />
       <Link
         to='/'
         className='w-8 h-8 fixed lt-lg:absolute m-6 select-none outline-none'
@@ -73,19 +57,19 @@ export function Navbar() {
           >
             <i className='ri-linkedin-box-line' />
           </a>
+
           <a
-            title="Hey, what's this thing?"
-            role='button'
-            onClick={togglePartyMode}
+            title='Toggle theme'
+            className={'select-none' + (partyMode ? ' cursor-none!' : '')}
+            onClick={toggleTheme}
           >
-            <i className={partyMode ? 'ri-game-fill' : 'ri-game-line'} />
-          </a>
-          <a title='Toggle theme' className='select-none' onClick={toggleTheme}>
             <i
               className={
-                colorScheme === ColorScheme.Light
-                  ? 'ri-sun-line'
-                  : 'ri-moon-line'
+                partyMode
+                  ? 'ri-moon-fill'
+                  : colorScheme === ColorScheme.Light
+                    ? 'ri-sun-line'
+                    : 'ri-moon-line'
               }
             />
           </a>

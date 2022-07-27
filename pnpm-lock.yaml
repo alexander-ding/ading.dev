@@ -16,6 +16,7 @@ specifiers:
   lint-staged: ^13.0.3
   nprogress: ^0.2.0
   preact: ^10.9.0
+  preact-shared-state-hook: ^0.2.4
   prettier: 2.7.1
   react-router-dom: '6'
   remixicon: ^2.5.0
@@ -28,6 +29,7 @@ dependencies:
   dayjs: 1.11.4
   nprogress: 0.2.0
   preact: 10.10.0
+  preact-shared-state-hook: 0.2.4_preact@10.10.0
   react-router-dom: 6.3.0
   remixicon: 2.5.0
 
@@ -2920,6 +2922,14 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
     dev: true
+
+  /preact-shared-state-hook/0.2.4_preact@10.10.0:
+    resolution: {integrity: sha512-UleGmXx6aEMtwpHp18lyEwAc1yxvIZ8DNbGjVZyCYOkZ+u/GhU1Lv21reHrM2rkHAnkGdL40oaLH8KyJQTvsiA==}
+    peerDependencies:
+      preact: '*'
+    dependencies:
+      preact: 10.10.0
+    dev: false
 
   /preact/10.10.0:
     resolution: {integrity: sha512-fszkg1iJJjq68I4lI8ZsmBiaoQiQHbxf1lNq+72EmC/mZOsFF5zn3k1yv9QGoFgIXzgsdSKtYymLJsrJPoamjQ==}

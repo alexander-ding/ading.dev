@@ -1,8 +1,31 @@
+import { useCallback, useState } from 'preact/hooks'
 import { Link } from 'react-router-dom'
+import useColorScheme, { ColorScheme } from '../hooks/useColorScheme'
+import usePartyMode from '../hooks/usePartyMode'
 import { getGreeting } from '../utils'
 
 export default function HomePage() {
   const greeting = getGreeting()
+  const [partyMode, setPartyMode] = usePartyMode()
+  const [colorScheme, setColorScheme] = useColorScheme()
+  const [shouldToggleBack, setShouldToggleBack] = useState(false)
+  const togglePartyMode = useCallback(() => {
+    if (!partyMode && colorScheme === ColorScheme.Light) {
+      setColorScheme(ColorScheme.Dark)
+      setShouldToggleBack(true)
+    } else if (partyMode && shouldToggleBack) {
+      setColorScheme(ColorScheme.Light)
+      setShouldToggleBack(false)
+    }
+    setPartyMode(!partyMode)
+  }, [
+    shouldToggleBack,
+    setShouldToggleBack,
+    colorScheme,
+    setColorScheme,
+    partyMode,
+    setPartyMode,
+  ])
   return (
     <div className='prose m-auto'>
       <h1>
@@ -109,8 +132,22 @@ export default function HomePage() {
             target='_blank'
           >
             ding@brown.edu
+          </a>{' '}
+          <a
+            title='Hmm, should I click on this thing?'
+            role='button'
+            className='border-b-hidden! cursor-pointer'
+            onClick={togglePartyMode}
+          >
+            <i
+              className={
+                'vertical-bottom' +
+                (partyMode
+                  ? ' ri-emotion-laugh-fill'
+                  : ' ri-emotion-laugh-line')
+              }
+            />
           </a>
-          .
         </p>
       </footer>
     </div>

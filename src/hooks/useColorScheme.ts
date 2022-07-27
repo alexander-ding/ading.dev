@@ -1,4 +1,5 @@
-import { useCallback, useState } from 'preact/hooks'
+import { createSharedState } from 'preact-shared-state-hook'
+import { useCallback } from 'preact/hooks'
 
 export enum ColorScheme {
   Light = 'light',
@@ -7,19 +8,18 @@ export enum ColorScheme {
 
 const colorSchemeStorageName = 'ading-color-scheme'
 
+const prefersDark =
+  window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+const settings = localStorage.getItem(colorSchemeStorageName) || 'auto'
+const initialScheme =
+  settings === ColorScheme.Dark ||
+  (prefersDark && settings !== ColorScheme.Light)
+    ? ColorScheme.Dark
+    : ColorScheme.Light
+const [scheme, setScheme] = createSharedState(initialScheme)
+
 // not really a hook lol
 function useColorScheme(): [ColorScheme, (c: ColorScheme) => void] {
-  const prefersDark =
-    window.matchMedia &&
-    window.matchMedia('(prefers-color-scheme: dark)').matches
-  const settings = localStorage.getItem(colorSchemeStorageName) || 'auto'
-  const initialScheme =
-    settings === ColorScheme.Dark ||
-    (prefersDark && settings !== ColorScheme.Light)
-      ? ColorScheme.Dark
-      : ColorScheme.Light
-  const [scheme, setScheme] = useState(initialScheme)
-
   const updateScheme = useCallback(
     (newScheme: ColorScheme) => {
       setScheme(newScheme)
@@ -31,8 +31,7 @@ function useColorScheme(): [ColorScheme, (c: ColorScheme) => void] {
     },
     [setScheme],
   )
-
-  return [scheme, updateScheme]
+  return [scheme(), updateScheme]
 }
 
 export default useColorScheme
