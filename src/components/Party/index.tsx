@@ -132,16 +132,6 @@ const Lights: FC = () => {
 const DancerCursor: FC = () => {
   const [isFlipped, setIsFlipped] = useState(false)
 
-  const [x, setX] = useState<number | undefined>(undefined)
-  const [y, setY] = useState<number | undefined>(undefined)
-  useEffect(() => {
-    const updateMouse = (e: MouseEvent) => {
-      setX(e.clientX)
-      setY(e.clientY)
-    }
-    window.addEventListener('mousemove', updateMouse)
-    return () => window.removeEventListener('mousemove', updateMouse)
-  }, [])
   useEffect(() => {
     const id = window.setInterval(
       () => setIsFlipped((isFlipped) => !isFlipped),
@@ -149,22 +139,12 @@ const DancerCursor: FC = () => {
     )
     return () => window.clearInterval(id)
   }, [])
-  useEffect(() => {
-    document.body.style.cursor = 'none'
-    return () => (document.body.style.cursor = 'auto')
-  }, [])
-
-  if (x === undefined || y === undefined) {
-    return null
-  }
 
   return (
     <img
       src='/assets/dancer.png'
-      className='fixed z-1000 w-60px pointer-events-none'
+      className='fixed z-1000 w-60px left-2 top-4 m-0! pointer-events-none'
       style={{
-        left: `${x - 30}px`,
-        top: `${y - 30}px`,
         transform: isFlipped ? 'scaleX(-1)' : '',
       }}
     />

@@ -1,14 +1,16 @@
-import { useCallback, useState } from 'preact/hooks'
+import { useCallback } from 'preact/hooks'
 import { Link } from 'react-router-dom'
 import useColorScheme, { ColorScheme } from '../hooks/useColorScheme'
 import usePartyMode from '../hooks/usePartyMode'
+import useShouldToggleBack from '../hooks/useShouldToggleBack'
 import { getGreeting } from '../utils'
 
 export default function HomePage() {
   const greeting = getGreeting()
   const [partyMode, setPartyMode] = usePartyMode()
   const [colorScheme, setColorScheme] = useColorScheme()
-  const [shouldToggleBack, setShouldToggleBack] = useState(false)
+  const [shouldToggleBack, setShouldToggleBack] = useShouldToggleBack()
+
   const togglePartyMode = useCallback(() => {
     if (!partyMode && colorScheme === ColorScheme.Light) {
       setColorScheme(ColorScheme.Dark)
@@ -105,7 +107,11 @@ export default function HomePage() {
           </a>
           . Before that, I worked on specializing object segmentation and image
           classification techniques to biomedical applications. You can read
-          more about my research in my <Link to='/research'>publications</Link>.
+          more about my research in my{' '}
+          <Link disabled={partyMode} to='/research'>
+            publications
+          </Link>
+          .
         </p>
         <p>
           Outside of work, I'm a big time classical music nerd and play the
@@ -113,7 +119,11 @@ export default function HomePage() {
           <a target='_blank' href='https://www.instagram.com/dingsdinner/'>
             Instagram food account
           </a>{' '}
-          to document my dining and cooking adventures.
+          to document my dining and cooking adventures, all while playing{' '}
+          <a target='_blank' href='https://na.op.gg/summoners/na/IAGDL'>
+            a little too much
+          </a>{' '}
+          League of Legends for my own good.
         </p>
       </div>
       <hr className='w-10' />
@@ -134,7 +144,7 @@ export default function HomePage() {
             ding@brown.edu
           </a>{' '}
           <a
-            title='Hmm, should I click on this thing?'
+            title={'Hey! What\'s this thing?'}
             role='button'
             className='border-b-hidden! cursor-pointer'
             onClick={togglePartyMode}

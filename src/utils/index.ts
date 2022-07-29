@@ -2,10 +2,10 @@ import dayjs from 'dayjs'
 
 function getGreeting(): string {
   const hour = dayjs().hour()
-  if (hour >= 5 && hour <= 12) {
+  if (hour >= 4 && hour <= 11) {
     return 'Good morning'
   }
-  if (hour >= 12 && hour <= 18) {
+  if (hour >= 11 && hour <= 17) {
     return 'Good afternoon'
   }
   return 'Good evening'

@@ -26,8 +26,8 @@ const Ball: FC<BallProps> = ({
   blurRadius,
   isFlipped,
 }) => {
-  const particleSize = 80
-  const particle = particleSize * size
+  const particleSize = 50
+  const particle = (particleSize / 4) * 3 * size + particleSize / 4
   const duration = 20
   const flip = isFlipped ? -1 : 1
   const blur = (blurRadius + 0.5) * particleSize * 0.5
@@ -44,15 +44,14 @@ const Ball: FC<BallProps> = ({
         animationTimingFunction: 'linear',
         animationIterationCount: 'infinite',
         opacity: 0.33,
-        color: color,
-        top: `${y * 80 + 10}vh`,
-        left: `${x * 80 + 10}vw`,
+        top: `${y * 50 + 25}vh`,
+        left: `${x * 50 + 25}vw`,
         animationDuration: `${animationDuration * duration + 30}s`,
         animationDelay: `${
           -animationDelay * (animationDuration * duration + 30)
         }s`,
         transformOrigin: `${transformX * 50 - 25}vw ${transformY * 50 - 25}vh`,
-        boxShadow: `${particle * 2 * flip}vmin 0 ${blur}vmin currentColor`,
+        boxShadow: `${particle * flip * 2}vmin 0 ${blur}vmin ${color}`,
       }}
     />
   )
@@ -83,7 +82,7 @@ function sampleBall(): BallProps {
 }
 
 const Background: FC = () => {
-  const nBalls = 20
+  const nBalls = 10
   const [balls, setBalls] = useState<Array<BallProps>>([])
   useEffect(() => {
     setBalls(Array(nBalls).fill(0).map(sampleBall))

@@ -27,6 +27,11 @@ const config = defineConfig({
       ],
     }),
   ],
+  resolve: {
+    alias: {
+      path: 'path-browserify',
+    },
+  },
 })
 
 export default config

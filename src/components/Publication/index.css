@@ -1,0 +1,19 @@
+.publication {
+    border-left: 0.2em var(--fg) solid;
+    padding-left: 1em;
+    margin-left: -1.2em;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+}
+
+.publication .abstract {
+    font-size: 0.9em;
+    overflow: hidden;
+    transition: all 1s;
+    margin: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    
+}

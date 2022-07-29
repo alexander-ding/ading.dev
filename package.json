@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && cp _redirects dist/_redirects",
+    "build": "tsc && VITE_COMMIT_REF=$COMMIT_REF VITE_REPOSITORY_URL=$REPOSITORY_URL vite build && cp _redirects dist/_redirects",
+    "build-dev": "tsc && npx netlify-cli build",
     "preview": "vite preview",
     "add-component": "hygen component new",
     "prepare": "husky install"
@@ -14,9 +15,11 @@
     "@preact/compat": "^17.1.1",
     "dayjs": "^1.11.4",
     "nprogress": "^0.2.0",
+    "path-browserify": "^1.0.1",
     "preact": "^10.9.0",
     "preact-shared-state-hook": "^0.2.4",
     "react-router-dom": "6",
+    "react-slidedown": "^2.4.7",
     "remixicon": "^2.5.0"
   },
   "lint-staged": {

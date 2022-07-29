@@ -26,7 +26,8 @@ html.dark {
 html {
   min-width: 100vw;
   min-height: 100vh;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 body {

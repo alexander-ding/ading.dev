@@ -15,10 +15,12 @@ specifiers:
   hygen: ^6.2.7
   lint-staged: ^13.0.3
   nprogress: ^0.2.0
+  path-browserify: ^1.0.1
   preact: ^10.9.0
   preact-shared-state-hook: ^0.2.4
   prettier: 2.7.1
   react-router-dom: '6'
+  react-slidedown: ^2.4.7
   remixicon: ^2.5.0
   typescript: ^4.6.4
   unocss: ^0.44.5
@@ -28,9 +30,11 @@ dependencies:
   '@preact/compat': 17.1.1_preact@10.10.0
   dayjs: 1.11.4
   nprogress: 0.2.0
+  path-browserify: 1.0.1
   preact: 10.10.0
   preact-shared-state-hook: 0.2.4_preact@10.10.0
   react-router-dom: 6.3.0
+  react-slidedown: 2.4.7
   remixicon: 2.5.0
 
 devDependencies:
@@ -2856,6 +2860,10 @@ packages:
       upper-case-first: 1.1.2
     dev: true
 
+  /path-browserify/1.0.1:
+    resolution: {integrity: sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==}
+    dev: false
+
   /path-case/2.1.1:
     resolution: {integrity: sha512-Ou0N05MioItesaLr9q8TtHVWmJ6fxWdqKB2RohFmNWVyJ+2zeKIeDNWAN6B/Pe7wpzWChhZX6nONYmOnMeJQ/Q==}
     dependencies:
@@ -2989,6 +2997,15 @@ packages:
       react: '>=16.8'
     dependencies:
       history: 5.3.0
+    dev: false
+
+  /react-slidedown/2.4.7:
+    resolution: {integrity: sha512-HGDfrqo70r1WVE0DwrySPdCT27/2wcZaJYh5kOnmuPSCtjDDJrNkDdn4Ep/cma2VVfwupeAGhbc2pbrGThU6VQ==}
+    peerDependencies:
+      react: ^16.3.0 || 17
+      react-dom: ^16.3.0 || 17
+    dependencies:
+      tslib: 2.4.0
     dev: false
 
   /readable-stream/3.6.0:
@@ -3362,7 +3379,6 @@ packages:
 
   /tslib/2.4.0:
     resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
-    dev: true
 
   /tsutils/3.21.0_typescript@4.7.4:
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}
