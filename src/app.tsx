@@ -1,13 +1,11 @@
 import { lazy } from 'preact/compat'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-// import HomePage from './pages/HomePage'
-import NotFoundPage from './pages/NotFoundPage'
-import ProjectsPage from './pages/ProjectsPage'
-import ResearchPage from './pages/ResearchPage'
 import WithLayout from './pages/WithLayout'
 
 const HomePage = lazy(() => import('./pages/HomePage'))
-// const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
+const ProjectsPage = lazy(() => import('./pages/ProjectsPage'))
+const ResearchPage = lazy(() => import('./pages/ResearchPage'))
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
 
 export function App() {
   return (

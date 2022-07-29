@@ -43,9 +43,9 @@ export function Navbar() {
           className='w-8 h-8 fixed lt-lg:absolute m-6 select-none outline-none'
         >
           {colorScheme === ColorScheme.Light ? (
-            <img src='/assets/logo.svg' />
+            <img width='32' height='32' src='/assets/logo.svg' />
           ) : (
-            <img src='/assets/logo-white.svg' />
+            <img width='32' height='32' src='/assets/logo-white.svg' />
           )}
         </Link>
       )}

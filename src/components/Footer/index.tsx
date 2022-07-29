@@ -1,5 +1,5 @@
-import path from 'path'
 import { FC } from 'preact/compat'
+import urlJoin from 'url-join'
 import useDocumentBodySize from '../../hooks/useDocumentBodySize'
 import useWindowSize from '../../hooks/useWindowSize'
 
@@ -12,7 +12,7 @@ const Footer: FC = () => {
         Last updated with commit{' '}
         <a
           target='_blank'
-          href={path.join(
+          href={urlJoin(
             import.meta.env.VITE_REPOSITORY_URL,
             'tree',
             import.meta.env.VITE_COMMIT_REF,
