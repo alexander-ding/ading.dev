@@ -1,5 +1,6 @@
 import { useCallback } from 'preact/hooks'
 import { Link } from 'react-router-dom'
+import Footer from '../components/Footer'
 import useColorScheme, { ColorScheme } from '../hooks/useColorScheme'
 import usePartyMode from '../hooks/usePartyMode'
 import useShouldToggleBack from '../hooks/useShouldToggleBack'
@@ -127,7 +128,7 @@ export default function HomePage() {
         </p>
       </div>
       <hr className='w-10' />
-      <footer>
+      <div>
         <p>
           Find me on{' '}
           <a target='_blank' href='https://github.com/alexander-ding'>
@@ -159,7 +160,9 @@ export default function HomePage() {
             />
           </a>
         </p>
-      </footer>
+      </div>
+
+      <Footer />
     </div>
   )
 }

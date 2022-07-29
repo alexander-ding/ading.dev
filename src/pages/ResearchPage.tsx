@@ -1,3 +1,4 @@
+import Footer from '../components/Footer'
 import Publication, { PublicationProps } from '../components/Publication'
 
 const publications: PublicationProps[] = [
@@ -135,6 +136,7 @@ export default function ResearchPage() {
           <Publication {...publication} />
         ))}
       </div>
+      <Footer />
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import { FC } from 'preact/compat'
 import { Link } from 'react-router-dom'
+import Footer from '../components/Footer'
 
 /**
  * Write a short description of this component here...
@@ -10,6 +11,7 @@ const NotFoundPage: FC = () => {
       <h1>404</h1>
       <p>Oops! We couldn't find the page you're looking for.</p>
       <Link to='/'>cd ..</Link>
+      <Footer />
     </div>
   )
 }

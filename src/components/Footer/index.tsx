@@ -7,10 +7,11 @@ const Footer: FC = () => {
   const windowSize = useWindowSize()
   const documentSize = useDocumentBodySize()
   return (
-    <footer className='prose m-auto mt-10 mb-6 opacity-50 flex flex-row'>
+    <footer className='mt-10 mb-6 opacity-50 flex flex-row'>
       <div className='inline-block flex-auto'>
         Last updated with commit{' '}
         <a
+          target='_blank'
           href={path.join(
             import.meta.env.VITE_REPOSITORY_URL,
             'tree',

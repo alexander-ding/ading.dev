@@ -1,6 +1,5 @@
 import { FC, Suspense, useEffect } from 'preact/compat'
 import { Outlet, useLocation } from 'react-router-dom'
-import Footer from '../components/Footer'
 import LazyLoad from '../components/LazyLoad'
 import { Navbar } from '../components/Navbar'
 
@@ -16,7 +15,6 @@ const WithLayout: FC = () => {
       <Suspense fallback={<LazyLoad />}>
         <main className='px-7 py-8'>
           <Outlet />
-          <Footer />
         </main>
       </Suspense>
     </>

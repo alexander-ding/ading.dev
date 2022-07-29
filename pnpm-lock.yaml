@@ -16,7 +16,7 @@ specifiers:
   lint-staged: ^13.0.3
   nprogress: ^0.2.0
   path-browserify: ^1.0.1
-  preact: ^10.9.0
+  preact: 10.10.0
   preact-shared-state-hook: ^0.2.4
   prettier: 2.7.1
   react-router-dom: '6'
