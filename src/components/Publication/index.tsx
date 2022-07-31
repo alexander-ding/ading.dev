@@ -1,6 +1,7 @@
 import { FC, useState } from 'preact/compat'
 import { SlideDown } from 'react-slidedown'
 import 'react-slidedown/lib/slidedown.css'
+import Links, { Link } from '../Links'
 import './index.css'
 const myName = 'Alex Ding'
 
@@ -23,21 +24,6 @@ const Authors: FC<AuthorsProps> = ({ authors }) => {
   return <span className='block'>{authors.map(createAuthor)}</span>
 }
 
-interface LinksProps {
-  links: Link[]
-}
-const Links: FC<LinksProps> = ({ links }) => {
-  const createLink = (link: Link, i: number) => {
-    const component = (
-      <a target='_blank' href={link.url}>
-        {link.name}
-      </a>
-    )
-    return i !== links.length - 1 ? <>{component} | </> : component
-  }
-  return <div className='mt-1'>{links.map(createLink)}</div>
-}
-
 export interface PublicationProps {
   title: string
   authors: string[]
@@ -45,11 +31,6 @@ export interface PublicationProps {
   inReview: boolean
   abstract: string
   links: Link[]
-}
-
-interface Link {
-  url: string
-  name: string
 }
 
 /**

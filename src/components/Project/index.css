@@ -1,0 +1,28 @@
+.project {
+    opacity: 70%;
+    padding: 0.8em 1em;
+    border-bottom: 0 !important;
+    transition: all .2s ease-out !important;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.project:hover {
+    opacity: 100%;
+    background: rgba(127, 127, 127, 8%);
+}
+
+.project h3 {
+    margin: 0;
+    font-size: 1.1em;
+    opacity: 90%;
+}
+
+.project .description {
+    color: var(--fg);
+    font-size: 0.9em;
+    margin-bottom: 0.5em;
+    line-height: 1.25em;
+}
