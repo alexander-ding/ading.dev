@@ -50,7 +50,7 @@ const neuralNetFlowchart = {
   links: [
     {
       name: 'Web',
-      url: 'https://ading.dev/nn-flowchart/',
+      url: 'https://alexding.me/nn-flowchart/',
     },
     {
       name: 'GitHub',
@@ -157,7 +157,7 @@ const lostInTranslation = {
   links: [
     {
       name: 'Web',
-      url: 'https://ading.dev/lost-in-translation',
+      url: 'https://alexding.me/lost-in-translation',
     },
     {
       name: 'GitHub',
@@ -172,7 +172,7 @@ const play24 = {
   links: [
     {
       name: 'Web',
-      url: 'https://ading.dev/24/',
+      url: 'https://alexding.me/24/',
     },
     {
       name: 'GitHub',
