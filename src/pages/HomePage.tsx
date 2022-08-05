@@ -154,8 +154,8 @@ export default function HomePage() {
               className={
                 'vertical-bottom' +
                 (partyMode
-                  ? ' ri-emotion-laugh-fill'
-                  : ' ri-emotion-laugh-line')
+                  ? ' i-ri-emotion-laugh-fill'
+                  : ' i-ri-emotion-laugh-line')
               }
             />
           </a>

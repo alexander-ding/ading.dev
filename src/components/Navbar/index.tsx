@@ -60,29 +60,29 @@ export function Navbar() {
             <>
               <NavLink title='Projects' to='/projects'>
                 <span className='lt-sm:display-none'>Projects </span>
-                <i className='ri-tools-line' />
+                <i className='i-ri-tools-line' />
               </NavLink>
               <NavLink title='Research' to='/research'>
                 <span className='lt-sm:display-none'>Research </span>
-                <i className='ri-flask-line' />
+                <i className='i-ri-flask-line' />
               </NavLink>
               <a title='Résumé' href='/resume.pdf'>
                 <span className='lt-sm:display-none'>Résumé </span>
-                <i class='ri-article-line' />
+                <i class='i-ri-article-line' />
               </a>
               <a
                 title='GitHub'
                 target='_blank'
                 href='https://github.com/alexander-ding'
               >
-                <i className='ri-github-line' />
+                <i className='i-ri-github-line' />
               </a>
               <a
                 title='LinkedIn'
                 target='_blank'
                 href='https://www.linkedin.com/in/alexander-j-ding/'
               >
-                <i className='ri-linkedin-box-line' />
+                <i className='i-ri-linkedin-box-line' />
               </a>
 
               <a
@@ -93,10 +93,10 @@ export function Navbar() {
                 <i
                   className={
                     partyMode
-                      ? 'ri-moon-fill'
+                      ? 'i-ri-moon-fill'
                       : colorScheme === ColorScheme.Light
-                        ? 'ri-sun-line'
-                        : 'ri-moon-line'
+                        ? 'i-ri-sun-line'
+                        : 'i-ri-moon-line'
                   }
                 />
               </a>

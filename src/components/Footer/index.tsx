@@ -37,7 +37,7 @@ const Footer: FC = () => {
             >
               Back to Top{' '}
             </span>
-            <i className='ri-arrow-up-s-line align-middle' />
+            <i className='i-ri-arrow-up-s-line' />
           </a>
         </div>
       ) : null}
