@@ -152,7 +152,7 @@ export default function HomePage() {
           >
             <i
               className={
-                'vertical-bottom' +
+                'vertical' +
                 (partyMode
                   ? ' i-ri-emotion-laugh-fill'
                   : ' i-ri-emotion-laugh-line')
