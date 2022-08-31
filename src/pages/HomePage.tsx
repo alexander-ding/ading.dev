@@ -45,12 +45,13 @@ export default function HomePage() {
             Brown University
           </a>{' '}
           who enjoys tackling complex engineering problems and creating
-          accessible tools to empower others. Go check out some of my{' '}
+          accessible tools to empower others. You can get a sense of the things
+          I've worked on by checking out some of my{' '}
           <Link to='/projects'>projects</Link>!
         </p>
+        <p>Right now, I'm taking the fall semester off to intern at Google.</p>
         <p>
-          I'm currently taking a semester off to intern at Google for fall 2022.
-          This past summer summer, I interned at{' '}
+          This past summer, I interned at{' '}
           <a
             target='_blank'
             href='https://www.bloomberg.com/company/what-we-do/'
