@@ -49,9 +49,12 @@ export default function HomePage() {
           I've worked on by checking out some of my{' '}
           <Link to='/projects'>projects</Link>!
         </p>
-        <p>Right now, I'm taking the fall semester off to intern at Google.</p>
         <p>
-          This past summer, I interned at{' '}
+          Right now, I'm taking the fall semester off to intern at Google, and
+          I'll be interning at Jane Street this summer.
+        </p>
+        <p>
+          Over the past summer, I interned at{' '}
           <a
             target='_blank'
             href='https://www.bloomberg.com/company/what-we-do/'
