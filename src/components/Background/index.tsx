@@ -1,5 +1,6 @@
 import { FC, useEffect, useState } from 'preact/compat'
 import './index.css'
+import useColorScheme, { ColorScheme } from '../../hooks/useColorScheme'
 
 interface BallProps {
   color: string
@@ -26,11 +27,12 @@ const Ball: FC<BallProps> = ({
   blurRadius,
   isFlipped,
 }) => {
+  const [scheme] = useColorScheme()
   const particleSize = 50
-  const particle = (particleSize / 4) * 3 * size + particleSize / 4
-  const duration = 20
+  const particle = ((particleSize * 3) / 4 + particleSize / 4) * size
+  const duration = 30
   const flip = isFlipped ? -1 : 1
-  const blur = (blurRadius + 0.5) * particleSize * 0.5
+  const blur = (blurRadius + 0.5) * particleSize
   return (
     <span
       className={'backface-hidden fixed -z-1'}
@@ -43,12 +45,12 @@ const Ball: FC<BallProps> = ({
         animationName: 'move',
         animationTimingFunction: 'linear',
         animationIterationCount: 'infinite',
-        opacity: 0.33,
+        opacity: scheme === ColorScheme.Dark ? 0.5 : 1,
         top: `${y * 50 + 25}vh`,
         left: `${x * 50 + 25}vw`,
-        animationDuration: `${animationDuration * duration + 30}s`,
+        animationDuration: `${animationDuration * duration + 20}s`,
         animationDelay: `${
-          -animationDelay * (animationDuration * duration + 30)
+          -animationDelay * (animationDuration * duration + 20)
         }s`,
         transformOrigin: `${transformX * 50 - 25}vw ${transformY * 50 - 25}vh`,
         boxShadow: `${particle * flip * 2}vmin 0 ${blur}vmin ${color}`,
@@ -58,6 +60,16 @@ const Ball: FC<BallProps> = ({
 }
 
 const colors = [
+  '#6f96f4',
+  '#73e5f5',
+  '#50edc6',
+  '#a7f96b',
+  '#ffff63',
+  '#ef3b3f',
+  '#f27255',
+  '#ee592d',
+  '#ffaa49',
+  '#fe899b',
   '#CC99C9',
   '#9EC1CF',
   '#9EE09E',
@@ -82,7 +94,7 @@ function sampleBall(): BallProps {
 }
 
 const Background: FC = () => {
-  const nBalls = 10
+  const nBalls = 15
   const [balls, setBalls] = useState<Array<BallProps>>([])
   useEffect(() => {
     setBalls(Array(nBalls).fill(0).map(sampleBall))
