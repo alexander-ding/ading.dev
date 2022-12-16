@@ -1,7 +1,9 @@
+import './index.css'
+
 import { FC } from 'preact/compat'
+
 import Links, { Link } from '../Links'
 import ManagedTag from '../ManagedTag'
-import './index.css'
 
 export interface ProjectProps {
   /** Lorem ipsum dolor sit anem... */

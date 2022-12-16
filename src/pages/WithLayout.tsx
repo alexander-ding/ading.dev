@@ -1,5 +1,6 @@
 import { FC, Suspense, useEffect } from 'preact/compat'
 import { Outlet, useLocation } from 'react-router-dom'
+
 import LazyLoad from '../components/LazyLoad'
 import { Navbar } from '../components/Navbar'
 

@@ -1,5 +1,7 @@
-import { FC, useEffect, useState } from 'preact/compat'
 import './index.css'
+
+import { FC, useEffect, useState } from 'preact/compat'
+
 import useColorScheme, { ColorScheme } from '../../hooks/useColorScheme'
 
 interface BallProps {

@@ -1,5 +1,5 @@
-import { createSharedState } from 'preact-shared-state-hook'
 import { useCallback } from 'preact/hooks'
+import { createSharedState } from 'preact-shared-state-hook'
 
 export enum ColorScheme {
   Light = 'light',

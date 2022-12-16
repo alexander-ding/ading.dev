@@ -1,5 +1,6 @@
 import { FC } from 'preact/compat'
 import urlJoin from 'url-join'
+
 import useDocumentBodySize from '../../hooks/useDocumentBodySize'
 import useWindowSize from '../../hooks/useWindowSize'
 

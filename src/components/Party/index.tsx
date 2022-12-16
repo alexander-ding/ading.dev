@@ -1,4 +1,5 @@
 import { FC, useEffect, useMemo, useState } from 'preact/compat'
+
 import useAnimationFrame from '../../hooks/useAnimationFrame'
 import useWindowSize from '../../hooks/useWindowSize'
 

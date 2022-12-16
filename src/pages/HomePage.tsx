@@ -1,5 +1,6 @@
 import { useCallback } from 'preact/hooks'
 import { Link } from 'react-router-dom'
+
 import Footer from '../components/Footer'
 import useColorScheme, { ColorScheme } from '../hooks/useColorScheme'
 import usePartyMode from '../hooks/usePartyMode'
@@ -150,7 +151,7 @@ export default function HomePage() {
             ding@brown.edu
           </a>{' '}
           <a
-            title={'Hey! What\'s this thing?'}
+            title={"Hey! What's this thing?"}
             role='button'
             className='border-b-hidden! cursor-pointer'
             onClick={togglePartyMode}

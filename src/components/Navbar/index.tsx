@@ -1,11 +1,13 @@
+import './index.css'
+
 import { useCallback } from 'preact/hooks'
 import { Link, NavLink } from 'react-router-dom'
+
 import useColorScheme, { ColorScheme } from '../../hooks/useColorScheme'
 import usePartyMode from '../../hooks/usePartyMode'
 import useShouldToggleBack from '../../hooks/useShouldToggleBack'
 import Background from '../Background'
 import Party from '../Party'
-import './index.css'
 
 export function Navbar() {
   const [colorScheme, setColorScheme] = useColorScheme()
@@ -95,8 +97,8 @@ export function Navbar() {
                     partyMode
                       ? 'i-ri-moon-fill'
                       : colorScheme === ColorScheme.Light
-                        ? 'i-ri-sun-line'
-                        : 'i-ri-moon-line'
+                      ? 'i-ri-sun-line'
+                      : 'i-ri-moon-line'
                   }
                 />
               </a>

@@ -1,8 +1,10 @@
+import 'react-slidedown/lib/slidedown.css'
+import './index.css'
+
 import { FC, useState } from 'preact/compat'
 import { SlideDown } from 'react-slidedown'
-import 'react-slidedown/lib/slidedown.css'
+
 import Links, { Link } from '../Links'
-import './index.css'
 const myName = 'Alex Ding'
 
 interface AuthorsProps {

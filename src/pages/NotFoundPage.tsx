@@ -1,5 +1,6 @@
 import { FC } from 'preact/compat'
 import { Link } from 'react-router-dom'
+
 import Footer from '../components/Footer'
 
 /**

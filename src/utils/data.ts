@@ -153,7 +153,7 @@ const plymi = {
 const lostInTranslation = {
   title: 'Lost in Translation',
   description:
-    'Explore what\'s lost in translation by passing the same text through Google Translate many times',
+    "Explore what's lost in translation by passing the same text through Google Translate many times",
   links: [
     {
       name: 'Web',
@@ -258,7 +258,7 @@ const theCriticalReview = {
 
 const hours = {
   title: 'Hours',
-  description: 'Brown University\'s office hour management system',
+  description: "Brown University's office hour management system",
   links: [
     {
       name: 'Web',
@@ -274,7 +274,7 @@ const hours = {
 
 const brownLabMatch = {
   title: 'Brown Lab Match',
-  description: 'Find a research group at Brown that\'s a match for you',
+  description: "Find a research group at Brown that's a match for you",
   links: [
     {
       name: 'Web',
@@ -339,7 +339,7 @@ const gastricLocationClassification = {
     'IEEE Symposium on Bioinformatics and Bioengineering (Kragujevac, Serbia), October 2021',
   inReview: false,
   abstract:
-    'Esophagogastroduodenoscopy (EGD) is a common procedure that visualizes the esophagus, stomach, and the duodenum by inserting a camera, attached to a long flexible tube, into the patient\'s mouth and down the stomach. A comprehensive EGD needs to examine all gastric locations, but since the camera is controlled manually, it is easy to miss some surface area and create diagnostic blind spots, which often result in life-costing oversights of early gastric cancer and other serious illnesses. In order to address this problem, we train a convolutional neural network to classify gastric locations based on the camera feed during an EGD, and based on the classifier and a triggering algorithm we propose, we build a video processing system that checks off each location as visited, allowing human operators to keep track of which locations they have visited and which they have not. Based on collected clinical patient reports, we consider six gastric locations, and we add a background class to our classifier to accomodate for the frames in EGD videos that do not resemble the six defined classes (including when the camera is outside of the patient body). Our best classifier achieves 98 % accuracy within the six gastric locations and 88 % accuracy including the background class, and our video processing system clearly checks off gastric locations in an expected order when being tested on recorded EGD videos. Lastly, we use class activation mapping to provide human-readable insight into how our trained classifier works.',
+    "Esophagogastroduodenoscopy (EGD) is a common procedure that visualizes the esophagus, stomach, and the duodenum by inserting a camera, attached to a long flexible tube, into the patient's mouth and down the stomach. A comprehensive EGD needs to examine all gastric locations, but since the camera is controlled manually, it is easy to miss some surface area and create diagnostic blind spots, which often result in life-costing oversights of early gastric cancer and other serious illnesses. In order to address this problem, we train a convolutional neural network to classify gastric locations based on the camera feed during an EGD, and based on the classifier and a triggering algorithm we propose, we build a video processing system that checks off each location as visited, allowing human operators to keep track of which locations they have visited and which they have not. Based on collected clinical patient reports, we consider six gastric locations, and we add a background class to our classifier to accomodate for the frames in EGD videos that do not resemble the six defined classes (including when the camera is outside of the patient body). Our best classifier achieves 98 % accuracy within the six gastric locations and 88 % accuracy including the background class, and our video processing system clearly checks off gastric locations in an expected order when being tested on recorded EGD videos. Lastly, we use class activation mapping to provide human-readable insight into how our trained classifier works.",
   links: [
     {
       url: 'https://ieeexplore.ieee.org/document/9635273',
@@ -372,7 +372,7 @@ const anEvaluationOf = {
   venue: 'Fall MIT PRIMES Conference (Cambridge, Massachusetts), October 2019',
   inReview: false,
   abstract:
-    'Unified Parallel C++ (UPC++), a C++ library, attempts to address the programming difficulty introduced by distributed parallel systems and still take advantage of the model\'s high scalability by exposing an API that represents the distributed memory as a contiguous global address space, similar to that of a sharedmemory parallel system. Though previous work, including the various benchmarks by UPC++ developers, has demonstrated the library\'s effectiveness in simple tasks and in porting distributed-memory parallel algorithms that are often implemented in OpenMPI, there lacks an assessment of the ease and effectiveness of porting shared-memory parallel algorithms into UPC++. We implement a number of graph algorithms in OpenMP, a common shared-memory parallel library, and port them into UPC++ in a locality-aware, communication-averse manner to evaluate the convenience, scalability, and robustness of UPC++. Tests on both a single-node, multicore system and the NERSC supercomputer (a multi-node system), with a plethora of real and random input graphs, demonstrate a number of prerequisites for high scalability in our UPC++ implementation: large input graphs, dense input graphs, and dense operations. Similar tests on our OpenMP implementation function as control, proving the algorithms\' performance in shared-memory systems. Despite the relatively straightforward and naive porting from OpenMP, we still achieve competitive performance and scalability in dense algorithms on large inputs. The porting demonstrates UPC++\'s ease of usage and good porting potential, especially when compared with other distributed libraries like OpenMPI. Finally, we extrapolate a distributed graph processing system on UPC++, optimized with a hybrid top-down/bottom-up approach, to simplify future distributed graph algorithm implementations.',
+    "Unified Parallel C++ (UPC++), a C++ library, attempts to address the programming difficulty introduced by distributed parallel systems and still take advantage of the model's high scalability by exposing an API that represents the distributed memory as a contiguous global address space, similar to that of a sharedmemory parallel system. Though previous work, including the various benchmarks by UPC++ developers, has demonstrated the library's effectiveness in simple tasks and in porting distributed-memory parallel algorithms that are often implemented in OpenMPI, there lacks an assessment of the ease and effectiveness of porting shared-memory parallel algorithms into UPC++. We implement a number of graph algorithms in OpenMP, a common shared-memory parallel library, and port them into UPC++ in a locality-aware, communication-averse manner to evaluate the convenience, scalability, and robustness of UPC++. Tests on both a single-node, multicore system and the NERSC supercomputer (a multi-node system), with a plethora of real and random input graphs, demonstrate a number of prerequisites for high scalability in our UPC++ implementation: large input graphs, dense input graphs, and dense operations. Similar tests on our OpenMP implementation function as control, proving the algorithms' performance in shared-memory systems. Despite the relatively straightforward and naive porting from OpenMP, we still achieve competitive performance and scalability in dense algorithms on large inputs. The porting demonstrates UPC++'s ease of usage and good porting potential, especially when compared with other distributed libraries like OpenMPI. Finally, we extrapolate a distributed graph processing system on UPC++, optimized with a hybrid top-down/bottom-up approach, to simplify future distributed graph algorithm implementations.",
   links: [
     {
       url: 'https://math.mit.edu/research/highschool/primes/materials/2019/Ding.pdf',
