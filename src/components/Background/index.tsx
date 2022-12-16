@@ -47,12 +47,12 @@ const Ball: FC<BallProps> = ({
         animationName: 'move',
         animationTimingFunction: 'linear',
         animationIterationCount: 'infinite',
-        opacity: scheme === ColorScheme.Dark ? 0.5 : 1,
+        opacity: scheme === ColorScheme.Dark ? 0.5 : 0.7,
         top: `${y * 50 + 25}vh`,
         left: `${x * 50 + 25}vw`,
         animationDuration: `${animationDuration * duration + 20}s`,
         animationDelay: `${
-          -animationDelay * (animationDuration * duration + 20)
+          animationDelay * -1 * (animationDuration * duration + 20)
         }s`,
         transformOrigin: `${transformX * 50 - 25}vw ${transformY * 50 - 25}vh`,
         boxShadow: `${particle * flip * 2}vmin 0 ${blur}vmin ${color}`,
