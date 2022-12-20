@@ -47,7 +47,7 @@ const Ball: FC<BallProps> = ({
         animationName: 'move',
         animationTimingFunction: 'linear',
         animationIterationCount: 'infinite',
-        opacity: scheme === ColorScheme.Dark ? 0.5 : 0.7,
+        opacity: scheme === ColorScheme.Dark ? 0.4 : 0.7,
         top: `${y * 50 + 25}vh`,
         left: `${x * 50 + 25}vw`,
         animationDuration: `${animationDuration * duration + 20}s`,
