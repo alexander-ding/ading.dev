@@ -51,11 +51,7 @@ export default function HomePage() {
           <Link to='/projects'>projects</Link>!
         </p>
         <p>
-          Right now, I'm taking the fall semester off to intern at Google, and
-          I'll be interning at Jane Street this summer.
-        </p>
-        <p>
-          Over the past summer, I interned at{' '}
+          Over the past summer, I worked at{' '}
           <a
             target='_blank'
             href='https://www.bloomberg.com/company/what-we-do/'
@@ -66,23 +62,20 @@ export default function HomePage() {
           <a target='_blank' href='https://kubernetes.io/'>
             Kubernetes
           </a>
-          -native tooling for workflow orchestration, designing and implementing
-          solutions for cross-cluster authentication, IO, and containerization
-          in{' '}
+          -native tooling for workflow orchestration, cross-cluster
+          authentication, IO, and containerization in{' '}
           <a target='_blank' href='https://go.dev/'>
             Go
           </a>
-          . Previously, I've worked at{' '}
-          <a target='_blank' href='https://votingsmarter.org/'>
-            VotingSmarter
+          . Then, I took the fall semester off to intern at{' '}
+          <a target='_blank' href='https://about.google/'>
+            Google
           </a>
-          ,{' '}
-          <a target='_blank' href='https://laiye.com/en/'>
-            Laiye
-          </a>
-          , and as a freelancer via{' '}
-          <a target='_blank' href='https://studev.org/'>
-            StuDev
+          , this time contributing to Kubernetes upstream to improve Windows
+          support for Kubernetes storage drivers. For this coming summer, I'll
+          be interning at{' '}
+          <a target='_blank' href='https://www.janestreet.com/'>
+            Jane Street
           </a>
           .
         </p>
@@ -100,19 +93,19 @@ export default function HomePage() {
           <a target='_blank' href='https://thecriticalreview.org/'>
             The Critical Review
           </a>
-          , Brown's official course review website. I'm also the Head TA for{' '}
-          <a target='_blank' href='https://cs.brown.edu/courses/csci1650/'>
-            CSCI 1650: Software Security and Exploitation
+          , Brown's official course review website. I'm also a Head TA for{' '}
+          <a target='_blank' href='https://cs.brown.edu/courses/csci1951-a/'>
+            CSCI 1951A: Data Science
           </a>
-          , where you learn to hack the stack.
+          .
         </p>
         <p>
-          Besides developing software, I do research in body-aware generative
+          Besides developing software, I did research in body-aware generative
           models through{' '}
           <a target='_blank' href='https://visual.cs.brown.edu/'>
             Brown Visual Computing
-          </a>
-          . Before that, I worked on specializing object segmentation and image
+          </a>{' '}
+          and worked on specializing object segmentation and image
           classification techniques to biomedical applications. You can read
           more about my research in my{' '}
           <Link disabled={partyMode} to='/research'>
@@ -133,6 +126,23 @@ export default function HomePage() {
           League of Legends for my own good.
         </p>
       </div>
+      <hr className='w-10' />
+      <p>
+        Since I get a lot of questions about internships, I made a{' '}
+        <a target='_blank' href='https://youtu.be/UxQs94sVQGQ'>
+          talk
+        </a>{' '}
+        and{' '}
+        <a
+          target='_blank'
+          href='https://docs.google.com/presentation/d/1nbQkDGQocNkraIK7_MhAcV_-3zrkAwgpfZxDWWD9tak/edit?usp=sharing'
+        >
+          slide deck
+        </a>{' '}
+        sharing detailed tips for each step of the SWE internship application
+        process. If you still have questions afterwards, reach out to me, and
+        I'm happy to chat.
+      </p>
       <hr className='w-10' />
       <div>
         <p>
