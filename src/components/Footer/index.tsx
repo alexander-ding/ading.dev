@@ -20,7 +20,10 @@ const Footer: FC = () => {
           )}
         >
           @{import.meta.env.VITE_COMMIT_REF.slice(0, 7)}
-        </a>
+        </a>{' '}
+        {import.meta.env.VITE_BUILD_TIME
+          ? `on ${import.meta.env.VITE_BUILD_TIME}`
+          : 'just now'}
         .
       </div>
       {documentSize.height > windowSize.height ? (
