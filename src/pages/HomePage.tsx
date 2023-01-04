@@ -140,8 +140,8 @@ export default function HomePage() {
           slide deck
         </a>{' '}
         sharing detailed tips for each step of the SWE internship application
-        process. If you still have questions afterwards, reach out to me, and
-        I'm happy to chat.
+        process. If you still have questions afterwards, reach out to me. I'm
+        happy to chat.
       </p>
       <hr className='w-10' />
       <div>
