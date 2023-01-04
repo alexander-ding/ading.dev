@@ -196,6 +196,17 @@ const satSolver = {
   ],
 }
 
+const dotFiles = {
+  title: '.dotfiles',
+  description: 'Replicate my dev environment in one command',
+  links: [
+    {
+      name: 'GitHub',
+      url: 'https://github.com/alexander-ding/.dotfiles',
+    },
+  ],
+}
+
 const vehicleRouting = {
   title: 'Vehicle Routing',
   description:
@@ -388,6 +399,7 @@ const anEvaluationOf = {
 // listings
 
 const PROJECTS: ProjectProps[] = [
+  dotFiles,
   satSolver,
   vehicleRouting,
   surrealistCloth,
