@@ -34,7 +34,8 @@ const Ball: FC<BallProps> = ({
   const particle = particleSize * size
   const duration = 30
   const flip = isFlipped ? -1 : 1
-  const blur = (blurRadius + 0.5) * particleSize
+  const blur = (blurRadius + 0.5) * particleSize * 0.5
+  const animation = animationDuration * duration + 20
   return (
     <span
       className={'backface-hidden fixed -z-1'}
@@ -47,13 +48,11 @@ const Ball: FC<BallProps> = ({
         animationName: 'move',
         animationTimingFunction: 'linear',
         animationIterationCount: 'infinite',
-        opacity: scheme === ColorScheme.Dark ? 0.4 : 0.7,
+        opacity: scheme === ColorScheme.Dark ? 0.3 : 0.5,
         top: `${y * 50 + 25}vh`,
         left: `${x * 50 + 25}vw`,
-        animationDuration: `${animationDuration * duration + 20}s`,
-        animationDelay: `${
-          animationDelay * -1 * (animationDuration * duration + 20)
-        }s`,
+        animationDuration: `${animation}s`,
+        animationDelay: `${-animationDelay * animation}s`,
         transformOrigin: `${transformX * 50 - 25}vw ${transformY * 50 - 25}vh`,
         boxShadow: `${particle * flip * 2}vmin 0 ${blur}vmin ${color}`,
       }}
@@ -96,7 +95,7 @@ function sampleBall(): BallProps {
 }
 
 const Background: FC = () => {
-  const nBalls = 15
+  const nBalls = 12
   const [balls, setBalls] = useState<Array<BallProps>>([])
   useEffect(() => {
     setBalls(Array(nBalls).fill(0).map(sampleBall))
