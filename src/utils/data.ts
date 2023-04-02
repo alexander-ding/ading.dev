@@ -296,6 +296,34 @@ const brownLabMatch = {
 
 // publications
 
+const deepLearningForGastricLocation = {
+  title:
+    'Deep Learning for Gastric Location Classification: An Analysis of Location Boundaries and Improvements through Attention and Contrastive Learning',
+  authors: [
+    'Chenxi Zhang',
+    'Alex Ding',
+    'Zhehong Fu',
+    'Jing Ni',
+    'Qilei Chen',
+    'Zinan Xiong',
+    'Benyuan Liu',
+    'Yu Cao',
+    'Shujiao Chen',
+    'Xiaowei Liu',
+  ],
+  venue:
+    'Special Issue for the ACM International Conference on Connected Health: Applications, Systems and Engineering Technologies, 2023',
+  inReview: false,
+  abstract:
+    'Gastrointestinal diseases, such as gastric cancer, are a major cause of deaths and economic losses. One common diagnostic procedure for detecting these diseases is esophagogastroduodenoscopy (EGD), in which a flexible tube with a camera is inserted into the upper gastrointestinal system to examine it. However, the movement of the gastrointestinal tract and the skill of the physician can sometimes result in blind spots, where potential abnormalities may be missed. To address this issue, we develop a deep learning-based system that tracks the camera’s location during EGD to help doctors avoid potential blind spots. Our system can classify twelve different parts of the upper gastrointestinal system, including the background, with an accuracy of 87.22%. Our analysis showed that most misclassifications occurred between adjacent areas, and we explore two methods, attention block and MoCo pre-training, that can improve the classification accuracy by about 2%. When evaluated on annotated EGD surgery videos, our model achieves a precision of 89.6% and a recall of 88.2%. This system has the potential to improve the accuracy of EGD diagnoses and ultimately reduce the impact of gastrointestinal diseases.',
+  links: [
+    {
+      url: 'https://www.sciencedirect.com/science/article/pii/S2352648323000223',
+      name: 'Paper',
+    },
+  ],
+}
+
 const learningBodyAware = {
   title: 'Learning Body-Aware 3D Shape Generative Models',
   authors: [
@@ -306,8 +334,8 @@ const learningBodyAware = {
     'Srinath Sridhar',
     'Daniel Ritchie',
   ],
-  venue: 'ACM SIGGRAPH Asia (Daegu, Korea), 2022',
-  inReview: true,
+  venue: '',
+  inReview: false,
   abstract:
     'The shape of many objects in the built environment is dictated by their relationships to the human body: how will a person interact with this object? Existing data-driven generative models of 3D shapes produce plausible objects but do not reason about the relationship of those objects to the human body. In this paper, we learn body-aware generative models of 3D shapes. Specifically, we train generative models of chairs, an ubiquitous shape category, which can be conditioned on a given body shape or sitting pose. The body-shape-conditioned models produce chairs which will be comfortable for a person with the given body shape; the pose-conditioned models produce chairs which accommodate the given sitting pose. To train these models, we define a "sitting pose matching" metric and a novel "sitting comfort" metric. Calculating these metrics requires an expensive optimization to sit the body into the chair, which is too slow to be used as a loss function for training a generative model. Thus, we train neural networks to efficiently approximate these metrics. We use our approach to train three body-aware generative shape models: a structured part-based generator, a point cloud generator, and an implicit surface generator. In all cases, our approach produces models which adapt their output chair shapes to input human body specifications.',
   links: [
@@ -420,6 +448,7 @@ const PROJECTS: ProjectProps[] = [
 ]
 
 const PUBLICATIONS: PublicationProps[] = [
+  deepLearningForGastricLocation,
   learningBodyAware,
   detectionOfEndoscope,
   gastricLocationClassification,
