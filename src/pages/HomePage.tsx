@@ -41,51 +41,35 @@ export default function HomePage() {
       </h1>
       <div>
         <p>
-          I'm an undergrad studying Computer Science at{' '}
+          I'm an undergrad pursuing a four-year concurrent ScB and ScM in
+          Computer Science at{' '}
           <a target='_blank' href='https://www.brown.edu/'>
             Brown University
+          </a>
+          . This summer, I am interning at{' '}
+          <a target='_blank' href='https://www.janestreet.com/'>
+            Jane Street
           </a>{' '}
-          who enjoys tackling complex engineering problems and creating
-          accessible tools to empower others. You can get a sense of the things
-          I've worked on by checking out some of my{' '}
-          <Link to='/projects'>projects</Link>!
-        </p>
-        <p>
-          Over the past summer, I worked at{' '}
+          as a software engineer intern. Before this, I interned at{' '}
           <a
             target='_blank'
             href='https://www.bloomberg.com/company/what-we-do/'
           >
             Bloomberg
           </a>{' '}
-          to build{' '}
-          <a target='_blank' href='https://kubernetes.io/'>
-            Kubernetes
-          </a>
-          -native tooling for workflow orchestration, cross-cluster
-          authentication, IO, and containerization in{' '}
-          <a target='_blank' href='https://go.dev/'>
-            Go
-          </a>
-          . Then, I took the fall semester off to intern at{' '}
+          last summer and took the fall semester off to intern at{' '}
           <a target='_blank' href='https://about.google/'>
             Google
-          </a>
-          , this time contributing to Kubernetes upstream to improve Windows
-          support for Kubernetes storage drivers. For this coming summer, I'll
-          be interning at{' '}
-          <a target='_blank' href='https://www.janestreet.com/'>
-            Jane Street
           </a>
           .
         </p>
         <p>
-          As the Projects Director at{' '}
+          At school, I was the Projects Director at{' '}
           <a target='_blank' href='https://www.fullstackatbrown.com/about'>
             Full Stack at Brown
           </a>
-          , I coordinate 30+ project teams and directly manage several high
-          impact products, such as{' '}
+          , where I coordinated 30+ project teams and directly manage several
+          high impact products, such as{' '}
           <a target='_blank' href='https://hours.cs.brown.edu/'>
             Hours
           </a>
@@ -93,14 +77,14 @@ export default function HomePage() {
           <a target='_blank' href='https://thecriticalreview.org/'>
             The Critical Review
           </a>
-          , Brown's official course review website. I'm also a Head TA for{' '}
+          , Brown's official course review website. I was also a Head TA for{' '}
           <a target='_blank' href='https://cs.brown.edu/courses/csci1951-a/'>
             CSCI 1951A: Data Science
           </a>
           .
         </p>
         <p>
-          Besides developing software, I did research in body-aware generative
+          Besides software engineering, I did research in body-aware generative
           models through{' '}
           <a target='_blank' href='https://visual.cs.brown.edu/'>
             Brown Visual Computing
@@ -129,10 +113,6 @@ export default function HomePage() {
       <hr className='w-10' />
       <p>
         Since I get a lot of questions about internships, I made a{' '}
-        <a target='_blank' href='https://youtu.be/UxQs94sVQGQ'>
-          talk
-        </a>{' '}
-        and{' '}
         <a
           target='_blank'
           href='https://docs.google.com/presentation/d/1nbQkDGQocNkraIK7_MhAcV_-3zrkAwgpfZxDWWD9tak/edit?usp=sharing'
@@ -140,8 +120,8 @@ export default function HomePage() {
           slide deck
         </a>{' '}
         sharing detailed tips for each step of the SWE internship application
-        process. If you still have questions afterwards, reach out to me. I'm
-        happy to chat.
+        process. If you still have questions after reading the slides, reach out
+        to me. I'm happy to chat.
       </p>
       <hr className='w-10' />
       <div>
