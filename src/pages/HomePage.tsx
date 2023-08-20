@@ -46,7 +46,7 @@ export default function HomePage() {
           <a target='_blank' href='https://www.brown.edu/'>
             Brown University
           </a>
-          . This summer, I am interning at{' '}
+          . This past summer, I interned at{' '}
           <a target='_blank' href='https://www.janestreet.com/'>
             Jane Street
           </a>{' '}
@@ -57,7 +57,7 @@ export default function HomePage() {
           >
             Bloomberg
           </a>{' '}
-          last summer and took the fall semester off to intern at{' '}
+          and{' '}
           <a target='_blank' href='https://about.google/'>
             Google
           </a>
