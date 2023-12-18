@@ -1,5 +1,5 @@
+import { signal } from '@preact/signals'
 import { useCallback } from 'preact/hooks'
-import { createSharedState } from 'preact-shared-state-hook'
 
 export enum ColorScheme {
   Light = 'light',
@@ -16,22 +16,22 @@ const initialScheme =
   (prefersDark && settings !== ColorScheme.Light)
     ? ColorScheme.Dark
     : ColorScheme.Light
-const [scheme, setScheme] = createSharedState(initialScheme)
+const scheme = signal(initialScheme)
 
 // not really a hook lol
 function useColorScheme(): [ColorScheme, (c: ColorScheme) => void] {
   const updateScheme = useCallback(
     (newScheme: ColorScheme) => {
-      setScheme(newScheme)
+      scheme.value = newScheme
       localStorage.setItem(colorSchemeStorageName, newScheme)
       document.documentElement.classList.toggle(
         'dark',
         newScheme === ColorScheme.Dark ? true : false,
       )
     },
-    [setScheme],
+    [scheme],
   )
-  return [scheme(), updateScheme]
+  return [scheme.value, updateScheme]
 }
 
 export default useColorScheme

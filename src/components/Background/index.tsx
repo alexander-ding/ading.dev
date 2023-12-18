@@ -1,6 +1,7 @@
 import './index.css'
 
-import { FC, useEffect, useState } from 'preact/compat'
+import { FunctionalComponent } from 'preact'
+import { useEffect, useState } from 'preact/hooks'
 
 import useColorScheme, { ColorScheme } from '../../hooks/useColorScheme'
 
@@ -17,7 +18,7 @@ interface BallProps {
   isFlipped: boolean
 }
 
-const Ball: FC<BallProps> = ({
+const Ball: FunctionalComponent<BallProps> = ({
   color,
   x,
   y,
@@ -94,7 +95,7 @@ function sampleBall(): BallProps {
   }
 }
 
-const Background: FC = () => {
+const Background: FunctionalComponent = () => {
   const nBalls = 12
   const [balls, setBalls] = useState<Array<BallProps>>([])
   useEffect(() => {

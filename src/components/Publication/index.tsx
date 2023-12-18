@@ -1,7 +1,8 @@
 import 'react-slidedown/lib/slidedown.css'
 import './index.css'
 
-import { FC, useState } from 'preact/compat'
+import { FunctionalComponent } from 'preact'
+import { useState } from 'preact/hooks'
 import { SlideDown } from 'react-slidedown'
 
 import Links, { Link } from '../Links'
@@ -10,7 +11,7 @@ const myName = 'Alex Ding'
 interface AuthorsProps {
   authors: string[]
 }
-const Authors: FC<AuthorsProps> = ({ authors }) => {
+const Authors: FunctionalComponent<AuthorsProps> = ({ authors }) => {
   const createAuthor = (author: string, i: number) => {
     if (i == authors.length - 1) {
       return author == myName ? <b>{author}</b> : author
@@ -38,7 +39,7 @@ export interface PublicationProps {
 /**
  * Write a short description of this component here...
  */
-const Publication: FC<PublicationProps> = ({
+const Publication: FunctionalComponent<PublicationProps> = ({
   title,
   authors,
   venue,

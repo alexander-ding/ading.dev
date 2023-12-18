@@ -15,10 +15,10 @@
   },
   "dependencies": {
     "@preact/compat": "^17.1.2",
+    "@preact/signals": "^1.2.2",
     "dayjs": "^1.11.9",
     "nprogress": "^0.2.0",
     "preact": "10.10.0",
-    "preact-shared-state-hook": "^0.2.5",
     "react-router-dom": "^6.15.0",
     "react-slidedown": "^2.4.7",
     "url-join": "^5.0.0"
@@ -44,7 +44,7 @@
     "@typescript-eslint/parser": "^5.62.0",
     "@unocss/preset-icons": "^0.45.30",
     "aliasify": "^2.1.0",
-    "eslint": "^8.47.0",
+    "eslint": "^8.56.0",
     "eslint-config-prettier": "^8.10.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.33.2",

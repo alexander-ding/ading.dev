@@ -1,4 +1,4 @@
-import { FC } from 'preact/compat'
+import { FunctionalComponent } from 'preact'
 export interface Link {
   url: string
   name: string
@@ -8,7 +8,7 @@ export interface LinksProps {
   links: Link[]
   style?: React.CSSProperties
 }
-const Links: FC<LinksProps> = ({ links, style }) => {
+const Links: FunctionalComponent<LinksProps> = ({ links, style }) => {
   const createLink = (link: Link, i: number) => {
     const component = (
       <a target='_blank' href={link.url}>

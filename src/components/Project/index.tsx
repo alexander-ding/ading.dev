@@ -1,6 +1,6 @@
 import './index.css'
 
-import { FC } from 'preact/compat'
+import { FunctionalComponent } from 'preact'
 
 import Links, { Link } from '../Links'
 import ManagedTag from '../ManagedTag'
@@ -16,7 +16,7 @@ export interface ProjectProps {
 /**
  * Write a short description of this component here...
  */
-const Project: FC<ProjectProps> = ({
+const Project: FunctionalComponent<ProjectProps> = ({
   title,
   description,
   links,

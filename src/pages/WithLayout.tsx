@@ -1,10 +1,12 @@
-import { FC, Suspense, useEffect } from 'preact/compat'
+import { FunctionalComponent } from 'preact'
+import { Suspense } from 'preact/compat'
+import { useEffect } from 'preact/hooks'
 import { Outlet, useLocation } from 'react-router-dom'
 
 import LazyLoad from '../components/LazyLoad'
 import { Navbar } from '../components/Navbar'
 
-const WithLayout: FC = () => {
+const WithLayout: FunctionalComponent = () => {
   const location = useLocation()
   useEffect(() => {
     window.scrollTo(0, 0)

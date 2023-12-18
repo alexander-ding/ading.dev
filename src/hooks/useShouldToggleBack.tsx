@@ -1,9 +1,15 @@
-import { createSharedState } from 'preact-shared-state-hook'
-
-const [shouldToggleBack, setShouldToggleBack] = createSharedState(false)
+import { signal } from '@preact/signals'
+import { useCallback } from 'preact/hooks'
+const shouldToggleBack = signal(false)
 
 function useShouldToggleBack(): [boolean, (_: boolean) => void] {
-  return [shouldToggleBack(), setShouldToggleBack]
+  const setShouldToggleBack = useCallback(
+    (newShouldToggleBack: boolean) => {
+      shouldToggleBack.value = newShouldToggleBack
+    },
+    [shouldToggleBack],
+  )
+  return [shouldToggleBack.value, setShouldToggleBack]
 }
 
 export default useShouldToggleBack

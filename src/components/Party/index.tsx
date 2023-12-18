@@ -1,4 +1,5 @@
-import { FC, useEffect, useMemo, useState } from 'preact/compat'
+import { FunctionalComponent } from 'preact'
+import { useEffect, useMemo, useState } from 'preact/hooks'
 
 import useAnimationFrame from '../../hooks/useAnimationFrame'
 import useWindowSize from '../../hooks/useWindowSize'
@@ -20,7 +21,7 @@ interface LightProps {
   color: string
 }
 
-const Light: FC<LightProps> = ({ x, y, color }) => {
+const Light: FunctionalComponent<LightProps> = ({ x, y, color }) => {
   return (
     <div
       className='fixed w-10px h-10px rd-100% bg-white z-0'
@@ -38,7 +39,7 @@ interface BeamProps {
   initialDegree: number
 }
 
-const Beam: FC<BeamProps> = ({ color, initialDegree }) => {
+const Beam: FunctionalComponent<BeamProps> = ({ color, initialDegree }) => {
   const [degree, setDegree] = useState<number | undefined>(undefined)
   useAnimationFrame((time) => setDegree(((time / 40) % 360) + initialDegree))
   if (degree === undefined) {
@@ -70,7 +71,7 @@ const getRandomColors = (n: number) => {
 interface BeamsProps {
   n: number
 }
-const Beams: FC<BeamsProps> = ({ n }) => {
+const Beams: FunctionalComponent<BeamsProps> = ({ n }) => {
   const [beamColors, setBeamColors] = useState(getRandomColors(n))
   useEffect(() => {
     const id = setInterval(() => setBeamColors(getRandomColors(n)), 2000)
@@ -86,7 +87,7 @@ const Beams: FC<BeamsProps> = ({ n }) => {
   )
 }
 
-const Lights: FC = () => {
+const Lights: FunctionalComponent = () => {
   const windowSize = useWindowSize()
   const xInterval = windowSize.width / Math.floor(windowSize.width / 150)
   const yInterval = windowSize.height / Math.floor(windowSize.height / 150)
@@ -130,7 +131,7 @@ const Lights: FC = () => {
   )
 }
 
-const DancerCursor: FC = () => {
+const DancerCursor: FunctionalComponent = () => {
   const [isFlipped, setIsFlipped] = useState(false)
 
   useEffect(() => {
@@ -152,7 +153,7 @@ const DancerCursor: FC = () => {
   )
 }
 
-const Party: FC = () => {
+const Party: FunctionalComponent = () => {
   return (
     <div className='party'>
       <DancerCursor />

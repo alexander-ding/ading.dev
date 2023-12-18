@@ -1,9 +1,15 @@
-import { createSharedState } from 'preact-shared-state-hook'
-
-const [partyMode, setPartyMode] = createSharedState(false)
+import { signal } from '@preact/signals'
+import { useCallback } from 'preact/hooks'
+const partyMode = signal(false)
 
 function usePartyMode(): [boolean, (_: boolean) => void] {
-  return [partyMode(), setPartyMode]
+  const setPartyMode = useCallback(
+    (newPartyMode: boolean) => {
+      partyMode.value = newPartyMode
+    },
+    [partyMode],
+  )
+  return [partyMode.value, setPartyMode]
 }
 
 export default usePartyMode

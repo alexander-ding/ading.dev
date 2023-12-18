@@ -1,7 +1,8 @@
 import nProgress from 'nprogress'
-import { FC, useEffect } from 'preact/compat'
+import { FunctionalComponent } from 'preact'
+import { useEffect } from 'preact/hooks'
 
-const LazyLoad: FC = () => {
+const LazyLoad: FunctionalComponent = () => {
   useEffect(() => {
     nProgress.start()
 

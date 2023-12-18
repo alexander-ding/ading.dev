@@ -1,10 +1,10 @@
-import { FC } from 'preact/compat'
+import { FunctionalComponent } from 'preact'
 import urlJoin from 'url-join'
 
 import useDocumentBodySize from '../../hooks/useDocumentBodySize'
 import useWindowSize from '../../hooks/useWindowSize'
 
-const Footer: FC = () => {
+const Footer: FunctionalComponent = () => {
   const windowSize = useWindowSize()
   const documentSize = useDocumentBodySize()
   return (

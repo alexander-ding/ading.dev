@@ -1,7 +1,7 @@
 ---
 to: src/components/<%=h.changeCase.pascalCase(name)%>/index.tsx
 ---
-import {FC} from 'preact/compat'
+import { FunctionalComponent } from 'preact'
 
 export interface <%=h.changeCase.pascalCase(name)%>Props {
   /** Lorem ipsum dolor sit anem... */
@@ -10,7 +10,7 @@ export interface <%=h.changeCase.pascalCase(name)%>Props {
 /**
  * Write a short description of this component here...
  */
-const <%=h.changeCase.pascalCase(name)%>: FC<<%=h.changeCase.pascalCase(name)%>Props> = ({}) => {
+const <%=h.changeCase.pascalCase(name)%>: FunctionalComponent<<%=h.changeCase.pascalCase(name)%>Props> = ({}) => {
   return <div></div>
 }
 
