@@ -3,6 +3,26 @@ import { PublicationProps } from '../components/Publication'
 
 // projects
 
+const bridge = {
+  title: 'Bridge',
+  description:
+    'RFC-compliant IP, TCP, HTTP implementation forming a virtual network via UDP sockets, interoperable with the real internet',
+  links: [
+    {
+      name: 'Web',
+      url: 'https://alexding.me/bridge',
+    },
+    {
+      name: 'Demo',
+      url: 'https://www.youtube.com/watch?v=E2NQlRVIX6Q',
+    },
+    {
+      name: 'GitHub',
+      url: 'https://github.com/alexander-ding/bridge',
+    },
+  ],
+}
+
 const surrealistCloth = {
   title: 'Surrealist Cloth',
   description:
@@ -428,6 +448,7 @@ const anEvaluationOf = {
 
 const PROJECTS: ProjectProps[] = [
   dotFiles,
+  bridge,
   satSolver,
   vehicleRouting,
   surrealistCloth,
