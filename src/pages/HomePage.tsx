@@ -46,11 +46,12 @@ export default function HomePage() {
           <a target='_blank' href='https://www.brown.edu/'>
             Brown University
           </a>
-          . This past summer, I interned at{' '}
+          . I'll be joining{' '}
           <a target='_blank' href='https://www.janestreet.com/'>
             Jane Street
           </a>{' '}
-          as a software engineer intern. Before this, I interned at{' '}
+          as a software engineer in fall 2024, after interning there the summer
+          before. Before this, I worked at{' '}
           <a
             target='_blank'
             href='https://www.bloomberg.com/company/what-we-do/'
@@ -61,7 +62,7 @@ export default function HomePage() {
           <a target='_blank' href='https://about.google/'>
             Google
           </a>
-          .
+          as a software engineering intern.
         </p>
         <p>
           At school, I was the Projects Director at{' '}
@@ -77,7 +78,7 @@ export default function HomePage() {
           <a target='_blank' href='https://thecriticalreview.org/'>
             The Critical Review
           </a>
-          , Brown's official course review website. I was also a Head TA for{' '}
+          , Brown's official course review website. I am also a Head TA for{' '}
           <a target='_blank' href='https://cs.brown.edu/courses/csci1951-a/'>
             CSCI 1951A: Data Science
           </a>
