@@ -3,6 +3,37 @@ import { PublicationProps } from '../components/Publication'
 
 // projects
 
+const gitGitGo = {
+  title: 'GitGitGo',
+  description: 'A distributed GitHub repository search engine',
+  links: [
+    {
+      name: 'GitHub',
+      url: 'https://github.com/meganfrisella/gitgitgo',
+    },
+    {
+      name: 'CSCI 1380',
+      url: 'http://cs.brown.edu/courses/csci1380/',
+    },
+  ],
+}
+
+const shapeAnalogy = {
+  title: 'Shape Analogy',
+  description:
+    'Interactive mesh editor based on normal-driven spherical shape analogies',
+  links: [
+    {
+      name: 'GitHub',
+      url: 'https://alexding.me/shape-analogy',
+    },
+    {
+      name: 'CSCI 2240',
+      url: 'http://cs.brown.edu/courses/csci2240/',
+    },
+  ],
+}
+
 const bridge = {
   title: 'Bridge',
   description:
@@ -448,6 +479,8 @@ const anEvaluationOf = {
 
 const PROJECTS: ProjectProps[] = [
   dotFiles,
+  gitGitGo,
+  shapeAnalogy,
   bridge,
   satSolver,
   vehicleRouting,
