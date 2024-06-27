@@ -105,7 +105,7 @@ export default function HomePage() {
             Instagram food account
           </a>{' '}
           to document my dining and cooking adventures, all while playing{' '}
-          <a target='_blank' href='https://na.op.gg/summoners/na/IAGDL'>
+          <a target='_blank' href='https://www.op.gg/summoners/na/IAGDL-IAGDL'>
             a little too much
           </a>{' '}
           League of Legends for my own good.
@@ -116,7 +116,7 @@ export default function HomePage() {
         Since I get a lot of questions about internships, I made a{' '}
         <a
           target='_blank'
-          href='https://docs.google.com/presentation/d/1nbQkDGQocNkraIK7_MhAcV_-3zrkAwgpfZxDWWD9tak/edit?usp=sharing'
+          href='https://docs.google.com/presentation/d/1XEjNnemisRDDLuy0MVlvwTh6-Wkob_R50v4HsgsyNQo/edit?usp=sharing'
         >
           slide deck
         </a>{' '}
